@@ -1,0 +1,127 @@
+Zagadka Einsteina - stworzyć poniższe programy
+
+https://pl.wikipedia.org/wiki/Zagadka_Einsteina
+
+Zagadka Einsteina lub zagadka rybki – zagadka znana w kilku różnych wersjach,
+której autorstwo tradycja przypisuje Albertowi Einsteinowi.
+Miał on rzekomo powiedzieć, że jest w stanie ją rozwiązać jedynie 2% populacji świata[1][2][3][4].
+Czasami uważa się za jej twórcę Lewisa Carolla[5].
+
+
+Spis treści
+1	Jedno z możliwych sformułowań
+2	Rozwiązanie zagadki
+3	Algorytmizacja rozwiązywania
+3.1	Algorytm brute force
+3.2	Algorytm ewaluujący reguły
+3.3	Algorytm ewaluujący reguły w zoptymalizowanej kolejności
+4	Przypisy
+Jedno z możliwych sformułowań
+5 ludzi różnych narodowości zamieszkuje 5 domów w 5 różnych kolorach.
+Wszyscy palą 5 różnych wyrobów tytoniowych i piją 5 różnych napojów.
+Hodują zwierzęta 5 różnych gatunków. Który z nich trzyma w domu rybki?
+
+1. Norweg zamieszkuje pierwszy dom
+Anglik mieszka w czerwonym domu.
+Zielony dom znajduje się bezpośrednio po lewej stronie domu białego.
+Duńczyk pija herbatkę.
+Palacz papierosów light mieszka obok hodowcy kotów.
+Mieszkaniec żółtego domu pali cygara.
+Niemiec pali fajkę.
+Mieszkaniec środkowego domu pija mleko.
+Palacz papierosów light ma sąsiada, który pija wodę.
+Palacz papierosów bez filtra hoduje ptaki.
+Szwed hoduje psy.
+Norweg mieszka obok niebieskiego domu.
+Hodowca koni mieszka obok żółtego domu.
+Palacz mentolowych pija piwo.
+W zielonym domu pija się kawę.
+Zakłada się, że domy ustawione są w jednej linii (1-2-3-4-5), a określenie „po lewej stronie” w punkcie 3. dotyczy lewej strony z perspektywy naprzeciw tych domów (tj. dom o numerze n jest bezpośrednio po lewej stronie domu n+1, a dom po lewej od domu n to dom o numerze n-1).
+
+Rozwiązanie zagadki
+Wszystkie pewne fakty: W pierwszym domu mieszka Norweg (1), drugi dom jest niebieski (12), w trzecim domu pija się mleko (8).
+
+Zielony dom znajduje się po lewej stronie domu białego (3), a więc na pewno nie są to domy 1. i 2., ponieważ drugi jest niebieski. Mogą to być domy 3. i 4., lub 4. i 5. W zielonym domu pija się kawę (15), a więc jest to dom 4. lub 5. (w domu 3. pija się mleko). Jednak gdyby był to dom 5., to nie miałby żadnego domu po prawej stronie, a musi mieć biały dom (3). Więc dom 4. jest zielony, a 5. biały.
+
+Anglik mieszka w czerwonym domu (2), więc pozostaje mu tylko dom środkowy.
+
+4 domy mają już przyporządkowane kolory, pozostał tylko pierwszy, więc wiemy że jest on żółty, a jego mieszkaniec pali cygara (6). Skoro Norweg mieszka w żółtym, to jego sąsiad z niebieskiego domu, hoduje konie (13).
+
+Co pije Norweg? Na pewno nie mleko, ani nie kawę, ponieważ te są już pite w innych domach. Na pewno nie herbatę, ponieważ ją pije Duńczyk (4). Na pewno nie piwo, ponieważ je pije palacz mentolowych (14), a Norweg pali cygara. Podsumowując, Norweg pije wodę, a co za tym idzie, jego sąsiad, pali papierosy light (9).
+
+Kto może palić mentolowe i pić piwo? Norweg nie może, bo pije wodę i pali cygara. Jego sąsiad nie może, bo pali papierosy light. Anglik nie może, bo pija mleko. W czwartym domu pija się kawę, a więc piwo i mentolowe przypadają do ostatniego domu.
+
+Według punktu (7), Niemiec pali fajkę, a my nie wiemy jakie papierosy pali się w domu 3. i 4. W domu 3. nie może mieszkać palacz fajki, ponieważ mieszka tam Anglik, więc w domu 4. mieszka Niemiec i pali fajkę. Anglik natomiast pali papierosy bez filtra (tylko to zostało), a co za tym idzie hoduje też ptaki (10).
+
+Skoro palacz papierosów light (drugi dom), mieszka obok hodowcy kotów, to tym hodowcą jest Norweg (drugi sąsiad to Anglik, ale on hoduje ptaki).
+
+Pozostaje jeden napój do rozdzielenia – herbata, więc pije ją mieszkaniec domu 2., a co za tym idzie jest on Duńczykiem (4).
+
+Pozostała tylko jedna informacja (11). Zatem w ostatnim domu musi mieszkać Szwed, hodujący psy (tylko ten dom nie ma określonego mieszkańca).
+
+Wiadomo już co hodują wszyscy, oprócz Niemca – zatem to on jest właścicielem rybek. Jedyne możliwe rozwiązanie:
+
+pierwszy dom	drugi dom	trzeci dom	czwarty dom	piąty dom
+Norweg	Duńczyk	Anglik	Niemiec	Szwed
+żółty	niebieski	czerwony	zielony	biały
+woda	herbata	mleko	kawa	piwo
+cygara	papierosy light	papierosy bez filtra	fajka	papierosy mentolowe
+koty	konie	ptaki	rybki	psy
+Algorytmizacja rozwiązywania
+Zagadka Einsteina jest dobrze określonym zagadnieniem programistycznym: jej rozwiązanie można znaleźć używając komputera i odpowiedniego algorytmu, zaimplementowanego w wybranym języku programowania. Rozwiązanie zagadki za pomocą komputera wiąże się z dwoma rodzajami trudności.
+
+Po pierwsze, reprezentacja występujących w zagadce obiektów (takich jak Norweg, papierosy light, psy) i relacji pomiędzy nimi (takich jak mieszka na lewo od) wymaga stworzenia adekwatnej do rozwiązywanego problemu struktury danych.
+
+Po drugie, stworzenie efektywnego algorytmu nie jest zadaniem trywialnym.
+
+Algorytm brute force
+Prymitywny w logice działania (a co za tym idzie – bardzo kosztowny obliczeniowo) jest algorytm klasy brute force, polegający na generowaniu wszystkich możliwych permutacji danych (innymi słowy, wszystkich możliwych wersji tabelki takiej, jak wyżej przedstawiona) i sprawdzaniu piętnastu warunków podanych w zagadce. Liczba kombinacji, które należy sprawdzić, jest jednak dość duża i przy użyciu typowego komputera osobistego z początków XXI wieku może wymagać wielotygodniowych obliczeń. Tabelkę zawierającą 5 rzędów (narodowość mieszkańca, kolor domu, preferowany napój, rodzaj papierosów, hodowane zwierzęta) i 5 kolumn (związanych z pięcioma domami) możemy bowiem wypełnić na {\displaystyle 5!\,^{5}\,=\,(1\cdot 2\cdot 3\cdot 4\cdot 5)\,^{5}\,=\,120\,^{5}\,=\,24\,883\,200\,000}5!\,^{5}\,=\,(1\cdot 2\cdot 3\cdot 4\cdot 5)\,^{5}\,=\,120\,^{5}\,=\,24\,883\,200\,000 sposobów.
+
+Znaczącą redukcję liczby porównań można uzyskać poprzez generowanie i testowanie jedynie takich permutacji, które spełniają kilka oczywistych kryteriów wstępnych, np. niebranie pod uwagę permutacji, w których Norweg mieszka w domu innym niż pierwszy itp. Umiejętna konstrukcja algorytmu pozwala na osiągnięcie czasu rozwiązywania zagadki na komputerze klasy pentium III rzędu kilku setnych sekundy; programy rozwiązujące zagadkę napisano m.in. w językach Lisp[6], C++[7][8], Python[9] oraz innych[10].
+
+Złożoność obliczeniowa algorytmu wynosi n!k gdzie n to liczba domów (liczba kolumn tabeli), k to liczba klas cech możliwych do przypisania (liczba wierszy tabeli).
+
+Algorytm ewaluujący reguły
+Algorytm zmniejszający wielokrotnie złożoność obliczeń próbuje odwzorować ciąg myślowy wykonywany przez człowieka rozwiązującego zagadkę. Algorytm polega na rekurencyjnym ewaluowaniu reguł (zdań z treści zadania) poprzez umieszczanie cech tylko w możliwych w danym momencie domach, zachowując relację pomiędzy dwoma cechami wynikającymi z ewaluowanej reguły.
+
+Ewaluacja reguły 1: W domu pierwszym umieszczamy Norwega:
+Dom1(Norweg).
+Ewaluacja reguły 2: Wyznaczamy wszystkie możliwe domy dla Anglika oraz oznaczamy ten dom jako czerwony. Dom 1 jest już zajęty przez Norwega, mamy więc 4 warianty:
+Dom1(Norweg), Dom2(Anglik,czerwony),
+Dom1(Norweg), Dom3(Anglik,czerwony),
+Dom1(Norweg), Dom4(Anglik,czerwony),
+Dom1(Norweg), Dom5(Anglik,czerwony).
+Ewaluacja reguły 3 dla wariantu 2.1: Ustalamy kolory sąsiednich domów na zielony i biały. Otrzymujemy 2 warianty:
+Dom1(Norweg), Dom2(Anglik, czerwony), Dom3(zielony), Dom4(biały),
+Dom1(Norweg), Dom2(Anglik, czerwony), Dom4(zielony), Dom5(biały).
+...
+Ilość wywołań funkcji w przypadku ewaluowania reguł w kolejności wynikającej z treści zadania:
+
+wywołanie procedury rekurencyjnej ewaluującej pojedynczą regułę: 2319 razy,
+wyznaczanie możliwych domów dla pojedynczej cechy z danej reguły: 5662 razy,
+ustawianie pojedynczej cechy w domu: 4014 razy.
+Złożoność obliczeniowa algorytmu jest trudna do oszacowania i zależna od kolejności ewaluacji reguł, jednak liczba wywołań kluczowych funkcji algorytmu wynosząca około 10000 jest znacząco mniejsza od złożoności algorytmu brute force. Czas wykonania programu napisanego w języku Scala uruchamianego na procesorze o częstotliwości taktowania 3 GHz wynosi około 10 milisekund.
+
+Algorytm ewaluujący reguły w zoptymalizowanej kolejności
+Optymalizacja powyższego algorytmu może polegać na każdorazowym aplikowaniu takiej reguły, która daje najmniejszą liczbę wariantów ze wszystkich pozostałych do ewaluacji reguł.
+
+Ewaluacja reguły 1: Umieszczamy w domu pierwszym Norwega:
+Dom1(Norweg).
+Ewaluacja reguły 8: W domu środkowym (3) umieszczamy mleko:
+Dom1(Norweg), Dom3(mleko).
+Ewaluacja reguły 12: Dom obok Norwega przyjmuje kolor niebieski:
+Dom1(Norweg), Dom2(niebieski), Dom3(mleko).
+Ewaluacja reguły 3: Ustalamy kolory sąsiednich domów na zielony i biały. Otrzymujemy dwa warianty:
+Dom1(Norweg), Dom2(niebieski), Dom3(mleko,zielony), Dom4(biały),
+Dom1(Norweg), Dom2(niebieski), Dom3(mleko), Dom4(zielony), Dom5(biały).
+...
+Ilości wywołań funkcji dla tak zoptymalizowanego algorytmu:
+
+wywołanie procedury rekurencyjnej ewaluującej pojedynczą regułę: 20 razy,
+wyznaczanie możliwych domów dla pojedynczej cechy z danej reguły: 712 razy,
+ustawianie pojedynczej cechy w danym domu: 31 razy.
+Jak widać zoptymalizowany algorytm wykonuje jedynie 6 błędnych ustawień cech (31 ustawień vs 25).
+
+Złożoność algorytmu przy założeniu takiego zestawu reguł, które dadzą jednoznaczne rozwiązanie można oszacować na około n2*log(n), gdzie n to liczba reguł opisujących zadanie. Czas wykonania programu napisanego w języku Scala uruchamianego na procesorze o częstotliwości taktowania 3 GHz wynosi około 1 milisekundę.
+
+Implementacja programu rozwiązującego zagadkę jest szczególnie łatwa w językach programowania logicznego, takich jak Prolog.
