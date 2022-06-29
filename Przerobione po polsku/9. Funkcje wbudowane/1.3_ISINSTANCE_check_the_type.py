@@ -1,4 +1,4 @@
-# sprawdzanie jakie rodzaju mamy dane i czy są int, float, tuple, complex lub inne
+# sprawdzanie jakiego rodzaju mamy dane i czy są int, float, tuple, complex lub inne
 print(1),
 
 A = 45
