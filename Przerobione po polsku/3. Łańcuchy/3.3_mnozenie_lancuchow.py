@@ -1,0 +1,21 @@
+print(3 * 'LIST   ')
+
+print()
+print()
+
+spacje = ' ' * 25
+print('%s Pod Krzyżem 12' % spacje)
+print('%s Wiatrołomy Dolne' % spacje)
+print('%s Chrabstwo Zachód' % spacje)
+print()
+print()
+print('Szanowny Panie,')
+print()
+print('pragnę poinformować, że z dachu osłaniającego szalet')
+print('wczorajszej nocy ubyło kilka dachówek.')
+print('Podejrzewam, że przyczyną były wzmożone wiatry gnębiące mieszkańców naszej osady.')
+print()
+print('Z wyrazami szacunku')
+print('Maciej Fasola')
+print()
+print()
