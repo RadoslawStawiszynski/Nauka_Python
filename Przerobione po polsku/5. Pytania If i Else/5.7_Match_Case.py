@@ -119,7 +119,3 @@ match n:
     case n if n > 0:
         print("Number is positive")
 
-
-print()
-print("Przykład nr 8")
-
