@@ -1,16 +1,16 @@
 print(dir(["lista",'krótka',"rónorodna"]))
-print()
+print('ok1')
 print(dir(1))
-print()
-# po wywłanmiu teraz tej funkcji nie będzie funkcji math
+print('ok2')
+# po wywołaniu teraz tej funkcji nie będzie funkcji math
 print(dir())
-print()
+print("ok3")
 import math
 print(dir(math))
-print()
-# po wywłanmiu teraz tej funkcji Będzie! funkcja math
+print('ok4')
+# po wywołaniu teraz tej funkcji Będzie! funkcja math
 print(dir())
-print()
+print('ok5')
 print("POP")
 print()
 pop = "Pop jest skrótem od nazwy Popcorn"

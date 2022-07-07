@@ -1,5 +1,5 @@
 # funkcja FLOAT służy do przekształcania liczby całkowitej na liczbę dziesiętną (zmiennoprzecinkową)
-# funkcja INT służy do przekształacania liczby dziesietnej na liczbę całkowitą
+# funkcja INT służy do przekształcania liczby dziesiętnej na liczbę całkowitą
 
 num1 = 10
 num2 = 10.01
@@ -12,4 +12,17 @@ print(int(num2))
 print(dir(int))
 
 
+print("Przykład")
+
+twoj_wiek = input("Ile masz lat?")
+
+wiek_f = float(twoj_wiek)
+wiek_i = int(twoj_wiek)
+
+if wiek_i >= 18 or wiek_f >= 18:
+    print("Jesteś stary tzn. pełnoletni")
+else:
+    print("Jesteś młody")
+    print("1i. Do pełnoletności masz jeszcze %s lat" % (18 - wiek_i))
+    print(f"2f. Do pełnoletności masz jeszcze {18 - wiek_f} lat")
 
