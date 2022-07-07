@@ -3,12 +3,19 @@
 
 num1 = 10
 num2 = 10.01
+num3 = "10"
+num4 = "10.01"
 
 print(float(num1))
 print(float(num2))
+print(float(num3))
+print(float(num4))
 
 print(int(num1))
 print(int(num2))
+print(int(num3))
+# print(int(num4)) ----- ta funkcja generuje błąd
+
 print(dir(int))
 
 
