@@ -8,7 +8,7 @@ print("Get ready!!")
 print()
 time.sleep(1)
 
-print("Let us play Hangman!!")
+print("Let us play find a letter!!")
 sleep(0.5)
 
 word = "Flower"
