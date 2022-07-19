@@ -7,4 +7,7 @@ py manage.py runserver              - uruchomienie aplikacji, strony itp, nastêp
 py manage.py startapp ...           - tworzy folder z aplikacj¹, trzeba podaæ nazwê
 
 
+>>> Views
+
+
 

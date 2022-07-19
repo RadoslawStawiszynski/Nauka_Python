@@ -1,5 +1,10 @@
 
-# Moja przygoda z językiem programowania Python rozpoczęła się rok temu. Przez ten czas poznałem podstawy języka, nauczyłem się wykorzystywać repozytoria np. Math i stworzyłem kilka małych projektów (dostępne na Github'ie). Nieustannie uczę się nowych rzeczy. W swojej nauce bazuje na doświadczeniu znajomych z branży IT jak i serwisów wspierających pracę programisty takich jak stackoverflow.com i innych.
+# Moja przygoda z językiem programowania Python rozpoczęła się rok temu.
+# Przez ten czas poznałem podstawy języka, nauczyłem się wykorzystywać repozytoria
+# np. Math i stworzyłem kilka małych projektów (dostępne na Github'ie).
+# Nieustannie uczę się nowych rzeczy.
+# W swojej nauce bazuje na doświadczeniu znajomych z branży IT jak
+# i serwisów wspierających pracę programisty takich jak stackoverflow.com i innych.
 
 
 # My adventure with the Python programming language began a year ago.
