@@ -33,3 +33,18 @@ def min_number(self):
 ### Sortowanie liczb
 print()
 print('ZADANIE - Sortowanie liczb')
+
+
+def sort_number(self):
+    i = 0
+    while i != len(self) - 1:
+        if self[i] > self[i + 1]:
+            self.append(self[i])
+            del self[i]
+            i = 0
+        else:
+            i += 1
+            continue
+
+    return self
+
