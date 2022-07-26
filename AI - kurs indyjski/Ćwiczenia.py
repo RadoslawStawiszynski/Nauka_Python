@@ -30,9 +30,6 @@ def min_number(self):
     print('Liczba minimalna wynosi:', min_l)
 
 
-print(min_number(L2))
-
-
-# Sortowanie liczb
+### Sortowanie liczb
 print()
 print('ZADANIE - Sortowanie liczb')
