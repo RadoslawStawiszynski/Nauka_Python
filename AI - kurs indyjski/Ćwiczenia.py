@@ -27,8 +27,8 @@ def min_number(self):
         else:
             i += 1
             pass
-    print('Liczba minimalna wynosi:', min_l)
-
+    x = f"Liczba minimalna wynosi: {min_l}"
+    return x
 
 ### Sortowanie liczb
 print()
@@ -46,5 +46,6 @@ def sort_number(self):
             i += 1
             continue
 
-    return self
+    return(self)
+
 
