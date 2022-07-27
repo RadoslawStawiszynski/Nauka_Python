@@ -18,12 +18,12 @@ L = [2, 5, 7, -3, 2, 4, -9, 0, 1, -18]
 L2 = [32, 35, 33, -3, 22, 4, -3, 0, 1, -18]
 
 
-def min_number(self):
-    min_l = self[0]
+def min_number(Ln):
+    min_l = Ln[0]
     i = 0
-    while i < len(self):
-        if self[i] < min_l:
-            min_l = self[i]
+    while i < len(Ln):
+        if Ln[i] < min_l:
+            min_l = Ln[i]
         else:
             i += 1
             pass
@@ -35,17 +35,23 @@ print()
 print('ZADANIE - Sortowanie liczb')
 
 
-def sort_number(self):
+def sort_number(Ln):
     i = 0
-    while i != len(self) - 1:
-        if self[i] > self[i + 1]:
-            self.append(self[i])
-            del self[i]
+    while i != len(Ln) - 1:
+        if Ln[i] > Ln[i + 1]:
+            Ln.append(Ln[i])
+            del Ln[i]
             i = 0
         else:
             i += 1
             continue
 
-    return(self)
+    return(Ln)
 
+### Sortowanie liczb wersja druga
 
+def selection_sort(y):
+    for i, n in enumerate(y):
+        j, m = min(enumerate(y[i:]), key = lambda a: a[1])
+        y[j + i], y[i] = n, m
+    return y
