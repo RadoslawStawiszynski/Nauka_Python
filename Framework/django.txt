@@ -1,0 +1,13 @@
+# Nauka DJANGO
+django-admin startproject ...       - stworzenie nowego folderu projektem w DJANGO,
+                                    trzeba pamietac o prawid³owej lokalizacji w CMD,
+                                    jak i o odpowiedniej nazwie projektu
+py manage.py runserver              - uruchomienie aplikacji, strony itp, nastêpnie w przegl¹darce
+                                    pod adresem:  127.0.0.1:8000  mo¿na podejrzeæ stronê lub app
+py manage.py startapp ...           - tworzy folder z aplikacj¹, trzeba podaæ nazwê
+
+
+>>> Views
+
+
+
