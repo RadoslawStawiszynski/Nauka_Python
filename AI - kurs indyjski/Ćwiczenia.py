@@ -50,6 +50,7 @@ def sort_number(Ln):
 
 ### Sortowanie liczb wersja druga
 
+
 def selection_sort(y):
     for i, n in enumerate(y):
         j, m = min(enumerate(y[i:]), key = lambda a: a[1])

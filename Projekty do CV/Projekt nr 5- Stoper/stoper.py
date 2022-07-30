@@ -1,5 +1,7 @@
 import time
 
+start_time = 0
+
 while True:
     try:
         input("Press Enter to continue and ctrl+C to exit the stopwatch")
