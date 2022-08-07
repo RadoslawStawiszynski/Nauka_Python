@@ -17,4 +17,4 @@ match f:
     case f if f == '/':
         print(x, ' / ', y, ' = ', x / y)
     case _:
-        print('Uwaga błąd sprawdź rółwnanie!')
+        print('Uwaga błąd sprawdź równanie!')
