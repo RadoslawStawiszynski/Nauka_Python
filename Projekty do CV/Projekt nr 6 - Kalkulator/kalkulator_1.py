@@ -1,9 +1,9 @@
 print('PROSTY KALKULATOR')
 print()
 
-x = int(input('Podaj pierwszÄ… liczbÄ™: '))
-f = input('Jakie dziaĹ‚anie chcesz wykonaÄ‡? \n DostÄ™pne dziaĹ‚ania to [  +  -  *  /  ] :')
-y = int(input('Podaj drugÄ… liczbÄ™: '))
+x = int(input('Podaj pierwszą liczbę: '))
+f = input('Jakie działanie chcesz wykonać? \n Dostępne działania to [  +  -  *  /  ] :')
+y = int(input('Podaj drugą liczbę: '))
 
 
 
@@ -17,6 +17,4 @@ match f:
     case f if f == '/':
         print(x, ' / ', y, ' = ', x / y)
     case _:
-        print('Uwaga bĹ‚Ä…d sprawdĹş rĂłwnanie!')
-
-x = rebase
+        print('Uwaga błąd sprawdź rółwnanie!')
