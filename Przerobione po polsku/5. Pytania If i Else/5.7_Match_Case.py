@@ -81,8 +81,8 @@ print("Przykład nr 5")
 list1 = ['a', 'b', 'c', 'd']
 
 match list1:
-    case ['e', 'f']:
-        print("e,f present")
+    case ['e', 'operator']:
+        print("e,operator present")
     case ['a', 'b', 'c', 'd']:
         print("a,b,c,d present")
 
