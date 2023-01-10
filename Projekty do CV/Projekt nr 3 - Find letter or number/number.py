@@ -16,17 +16,17 @@ while chance > 0:
     guess = int(input("Podaj liczbę: "))
     chance -= 1
     if guess == number:
-        print('BRAWO!!! odgadłeś liczbę')
+        print('BRAWO!!! Odgadłeś liczbę')
         break
     elif guess not in range(1, 13):
         print("Liczba spoza zakresu szukanych liczb. Spróbuj jeszcze raz")
         chance += 1
     elif guess > number:
-        print("Za duża number.")
+        print("Za duża liczba.")
     elif guess < number:
-        print('Za mała number.')
+        print('Za mała liczba.')
     else:
-        print('uwaga!błąd!')
+        print('Uwaga!błąd!')
         break
 
     if chance == 0:

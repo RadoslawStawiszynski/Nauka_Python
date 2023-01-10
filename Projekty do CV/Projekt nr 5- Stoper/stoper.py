@@ -13,4 +13,6 @@ while True:
         print("Timer has stopped")
         end_time = time.time()
         print("The time elapsed:", round(end_time - start_time, 2), 'secs')
+        quit()
         break
+
