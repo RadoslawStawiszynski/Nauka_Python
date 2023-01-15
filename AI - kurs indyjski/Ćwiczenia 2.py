@@ -42,6 +42,6 @@ def selection_sort(y):
 d = L2
 print(selection_sort(d))
 
-print(min_number(L1))
+print(min_number(L2))
 print(sort_number(L2))
 
