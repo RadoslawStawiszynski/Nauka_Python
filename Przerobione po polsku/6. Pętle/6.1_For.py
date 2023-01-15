@@ -52,7 +52,7 @@ lista_liczb = [1, 2, 3]
 for m_tydzien in lista_liczb:
     print(m_tydzien)
     for w in lista_liczb:
-        print(w)
+        print(w,"a")
 print()
 
 # TEST
