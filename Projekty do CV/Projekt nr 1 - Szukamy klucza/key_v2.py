@@ -1,6 +1,7 @@
 import turtle
-import pygame
 
+
+# Próba dodania grafiki
 # Ustawienie okna
 window = turtle.Screen()
 window.title("Moja Gra")
