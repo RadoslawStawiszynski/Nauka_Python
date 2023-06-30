@@ -1,19 +1,16 @@
 from random import randint
 import math
 
-# from math import sqrt
-
-
+# Game settings
 game_width = 3
 game_height = 3
 
+# Generate random positions for the key and door
 key_x = randint(0, game_width)
 key_y = randint(0, game_height)
 
 door_x = randint(0, game_width)
 door_y = randint(0, game_height)
-
-# różne poziomy gry można stworzyć
 
 player_x = 0
 player_y = 0
@@ -25,60 +22,60 @@ distance_before_move = math.sqrt((key_x - player_x) ** 2 + (key_y - player_y) **
 
 player_found_key = False
 
-print("klucz ", key_x, key_y)
-print("drzwi ", door_x, door_y)
+print("key: ", key_x, key_y)
+print("door: ", door_x, door_y)
 
 while not player_found_key:
     steps += 1
     print()
-    print('''Możesz udać się w kierunkach określonych jako [W/A/S/D]: 
-Aby opuścić grę wciśnij [Q]''')
-    move = input("Dokąd chcesz iść?")
+    print('''You can move in the directions [W/A/S/D]:
+Press [Q] to quit the game.''')
+    move = input("Where do you want to go?")
     match move.lower():
         case "w":
             player_y += 1
             if player_y > game_height:
-                print("Doszedłeś do górnej granicy planszy.")
+                print("You have reached the top boundary of the board.")
                 player_y = game_height
         case "a":
             player_x -= 1
             if player_x < 0:
-                print("Doszedłeś do lewej granicy planszy.")
+                print("You have reached the left boundary of the board.")
                 player_x = 0
         case "s":
             player_y -= 1
             if player_y < 0:
-                print("Doszedłeś do dolnej granicy planszy.")
+                print("You have reached the bottom boundary of the board.")
                 player_y = 0
 
         case "d":
             player_x += 1
             if player_x > game_width:
-                print("Doszedłeś do prawej granicy planszy.")
+                print("You have reached the right boundary of the board.")
                 player_x = game_width
         case "q":
             print('Game over')
             quit()
         case _:
-            print("Nie wiem dokąd chcesz iść ...")
+            print("I don't know where you want to go...")
             continue
 
     if player_x == key_x and player_y == key_y:
-        print("Gratulacje znalazłeś skarb! Teraz możesz iść otworzyć drzwi. Drzwi są  ", door_x, "  ", door_y)
-        text_1 = "Zrobiłeś %s kroków."
+        print("Congratulations! You found the treasure! Now you can go open the door. The door is at ", door_x, "  ", door_y)
+        text_1 = "You took %s steps."
         print(text_1 % steps)
 
     distance_after_move = math.sqrt((key_x - player_x) ** 2 + (key_y - player_y) ** 2)
 
     if distance_before_move > distance_after_move:
-        print("Jesteś bliżej klucza.")
+        print("You are closer to the key.")
     else:
-        print("Jesteś dalej od klucza.")
+        print("You are farther from the key.")
 
     distance_before_move = distance_after_move
 
     if player_x == door_x and player_y == door_y:
-        print(f'Congratulation! You finished the Level {level}.')
+        print(f'Congratulations! You finished Level {level}.')
         level += 1
         quit()
 
