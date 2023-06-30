@@ -14,7 +14,7 @@ print(),print(2),
 print(C[0])
 print(C[1])
 
-# te smae działania na
+# te same działania na
 print(), print(3),
 
 A = 45
